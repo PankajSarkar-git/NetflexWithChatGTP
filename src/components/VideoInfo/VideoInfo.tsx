@@ -14,7 +14,7 @@ const VideoInfo = ({
           <h1 className="text-3xl font-bold text-white mb-4">
             {original_title}
           </h1>
-          <p className="text-gray-300 mb-6 leading-relaxed">{overview}</p>
+          <p className="text-gray-300 mb-6 leading-relaxed">{overview.slice(0, 244)}{overview.length > 244 && "..."}</p>
         </div>
         <div className="flex space-x-4">
           <button className="px-14 py-2 bg-red-600 opacity-50 hover:bg-red-700 text-white font-semibold rounded-lg transition duration-300">

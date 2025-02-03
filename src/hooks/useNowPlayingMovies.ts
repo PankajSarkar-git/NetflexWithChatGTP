@@ -13,7 +13,7 @@ const useNowPlayingHook = () => {
       ApiOptions
     );
     const json = await data.json();
-    console.log(json.results, "json.results");
+    // console.log(json.results, "json.results");
     dispatch(addNowPlayingMovies(json.results));
   };
   useEffect(() => {

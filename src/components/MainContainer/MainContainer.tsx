@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import VideoInfo from "../VideoInfo/VideoInfo";
 import VideoBackground from "../VideoBackground/VideoBackground";
+import MoviesContainer from "../MoviesContainer/MoviesContainer";
 
 const MainContainer = () => {
   const movies = useSelector((store: any) => store?.movies?.nowPlayingMovies);
@@ -23,8 +24,13 @@ const MainContainer = () => {
 
   return (
     <div className="">
-      <VideoInfo original_title={original_title} overview={overview} />
-      <VideoBackground movieId={id} />
+      <div className="">
+        <VideoInfo original_title={original_title} overview={overview} />
+        <VideoBackground movieId={id} />
+      </div>
+      <div className="">
+        <MoviesContainer />
+      </div>
     </div>
   );
 };
